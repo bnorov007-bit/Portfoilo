@@ -1,94 +1,112 @@
-/* 1. Global Setup */
 :root {
-    --primary: #3498db; /* Change this hex code to your favorite color */
-    --dark: #2c3e50;
-    --light: #f4f7f6;
-    --white: #ffffff;
+    --bg-color: #1a66db; /* The deep blue from your screenshot */
+    --text-color: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.3);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body { 
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-    line-height: 1.6; 
-    background-color: var(--light); 
-    color: #333; 
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+    overflow-x: hidden;
 }
 
-/* 2. Navigation - Fixed to top */
+/* Navigation */
 nav { 
-    background: var(--dark); 
-    padding: 1rem 0; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav ul { 
+    padding: 2rem 5%; 
     display: flex; 
-    justify-content: center; 
-    list-style: none; 
+    justify-content: flex-end; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-nav ul li { margin: 0 20px; }
+nav ul { list-style: none; display: flex; gap: 30px; }
 
 nav ul li a { 
-    color: var(--white); 
+    color: var(--text-color); 
     text-decoration: none; 
-    font-weight: 600; 
-    transition: 0.3s; 
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    transition: 0.3s;
 }
 
-nav ul li a:hover { color: var(--primary); }
+nav ul li a:hover { opacity: 1; }
 
-/* 3. Container & Sections */
-.container { 
-    max-width: 850px; 
-    margin: 40px auto; 
-    padding: 0 20px; 
+/* Layouts */
+.content-wrapper { 
+    padding: 10% 8%; 
+    margin-top: 50px;
 }
 
-section { 
-    background: var(--white); 
-    padding: 40px; 
-    border-radius: 15px; 
-    margin-bottom: 30px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease; /* Makes the section move slightly */
+h1 { 
+    font-size: clamp(3rem, 8vw, 6rem); /* Responsive giant text */
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 4rem;
+    letter-spacing: -3px;
 }
 
-/* 4. The Hover Effect - Makes the page feel "alive" */
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* 5. Typography */
-h1, h2 { color: var(--dark); margin-bottom: 20px; }
-h1 { font-size: 2.5rem; text-align: center; }
-
-/* 6. Profile Picture Styling */
-.profile-pic { 
+.sub-header {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
     display: block;
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%; 
-    margin: 0 auto 20px;
-    border: 4px solid var(--primary);
-    object-fit: cover;
+    opacity: 0.8;
 }
 
-/* 7. Grid for Activities */
-.grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px; 
+.description {
+    font-size: 1.4rem;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-top: 2rem;
+    font-weight: 300;
 }
 
-.card { 
-    background: #f9f9f9; 
-    padding: 20px; 
-    border-radius: 10px; 
-    border-left: 5px solid var(--primary); 
+/* Portfolio/Projects Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.item { margin-bottom: 2rem; }
+.item h3 { font-size: 2rem; margin-bottom: 10px; }
+.item p { opacity: 0.8; font-size: 1.1rem; }
+
+/* Contact Form */
+input, textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+button {
+    background: white;
+    color: var(--bg-color);
+    border: none;
+    padding: 1rem 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    nav { justify-content: center; background: var(--bg-color); }
 }
