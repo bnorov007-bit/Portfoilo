@@ -110,3 +110,16 @@ button {
     h1 { font-size: 3rem; }
     nav { justify-content: center; background: var(--bg-color); }
 }
+.bio-container {
+    margin-top: 40px;
+    max-width: 700px; /* Prevents the text from being too wide */
+}
+
+.long-bio {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Adds space between lines for readability */
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    text-align: justify; /* Optional: makes the edges straight like a magazine */
+}
