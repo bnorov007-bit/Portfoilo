@@ -125,3 +125,30 @@ button {
     max-width: 800px;           /* Limits width so the lines aren't too long */
     text-align: left;           /* Keeps the clean left-aligned look from your photos */
 }
+/* Styling for the text in the Contact Section */
+.contact-text {
+    font-size: 1.6rem;         /* Matching your large bio size */
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #ffffff;            /* Pure white for the main text */
+}
+
+/* Styling for the Email Link */
+.email-link {
+    color: #ffd700;            /* A gold color to make the email stand out (or pick any color below) */
+    text-decoration: none;     /* Removes the ugly underline */
+    font-weight: 600;          /* Makes the email slightly bolder */
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3); /* Adds a sophisticated underline */
+    transition: 0.3s;
+}
+
+.email-link:hover {
+    color: #ffffff;            /* Turns white when you hover over it */
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Styling the Form Labels/Placeholders */
+::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Makes the "Your Name" text inside boxes softer */
+}
