@@ -115,11 +115,13 @@ button {
     max-width: 700px; /* Prevents the text from being too wide */
 }
 
+/* This targets ONLY the long paragraphs in your About section */
 .long-bio {
-    font-size: 1.2rem;
-    line-height: 1.8; /* Adds space between lines for readability */
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    font-weight: 300;
-    text-align: justify; /* Optional: makes the edges straight like a magazine */
+    font-size: 1.6rem;         /* Increased from 1.2rem to make it much bolder */
+    line-height: 1.6;           /* Space between lines so it stays readable */
+    margin-bottom: 2.5rem;      /* Space between paragraphs */
+    opacity: 0.95;              /* Makes it nearly full white */
+    font-weight: 300;           /* Keeps it thin and elegant despite being large */
+    max-width: 800px;           /* Limits width so the lines aren't too long */
+    text-align: left;           /* Keeps the clean left-aligned look from your photos */
 }
